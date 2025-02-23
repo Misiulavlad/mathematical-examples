@@ -1,12 +1,12 @@
 #include "util.h"
 
 char mathematical_sign() {
-	srand(time(0));
+
 	char sign;
-	int num = rand() % 1;
+	int num = rand() % 2+1;
 	switch (num) {
-	case 0: sign = '+';
-	case 1: sign = '-';
+	case 1: sign = '+'; break;
+	case 2: sign = '-'; break;
 	}
 	return sign;
 }
@@ -18,25 +18,25 @@ int examples() {
 	int first_num;
 	int sec_num;
 	int result;
-	int count_of_mistakes = 0;
-	char sign = mathematical_sign();
+	long long count_of_mistakes = 0;
+
 	int vec[SIZE];
 
 	clock_t start_time = clock();
 
-	for (int i = 0; i <= 5; i++) {
-		first_num = rand() % 20+1;
+	for (int i = 0; i < 50; i++) {
+		char sign = mathematical_sign();
+
+		first_num = rand() % 20+1 ;
 		sec_num = rand() % 20+1;
-		switch (sign) {
-		case '+':cout << first_num << "+" << sec_num<<endl;
-		case '-':cout << first_num << "-" << sec_num<<endl;
-		}
+		
+		cout << first_num << " " << sign << " " << sec_num << " = ";
+		
 
 		switch (sign) {
-		case '+':result = first_num + sec_num;
-		case '-':result = first_num - sec_num;
+		case '+':result = first_num + sec_num; break;
+		case '-':result = first_num - sec_num; break;
 		}
-		cout << "Answer: ";
 		cin >> vec[i];
 		if (vec[i] != result) {
 			count_of_mistakes++;
@@ -49,9 +49,9 @@ int examples() {
 	int spent = finish - start;
 	int minutes = int(time_spent) / 60;
 	int seconds = int(time_spent) % 60;
-	
 
-	cout << "Spent time: " << minutes << " minutes " << seconds << " seconds"<<endl;
+
+	cout << "Spent time: " << minutes << " minutes " << seconds << " seconds" << endl;
 	cout << "Count_of_mistakes: ";
 	return count_of_mistakes;
 
