@@ -26,5 +26,7 @@ int main() {
 		cin >> size;
 		cout << examples(size, name) << endl;
 	}
+	system("cls");
+	cout << "It's your decision. Bruh";
 	return 0;
 }
