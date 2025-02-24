@@ -63,7 +63,6 @@ int examples(int size, string name) {
 
 	}
 
-
 	clock_t end_time = clock();
 	double time_spent = double(end_time - start_time) / CLOCKS_PER_SEC;
 
