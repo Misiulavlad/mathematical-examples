@@ -30,7 +30,7 @@ int main() {
 
 	if (decision == "No" || decision == "no") {
 		Syst;
-		cout << "It's your decision. Bruh";
+		cout << "\033[1;31m It's your decision. Bruh \033[0m";
 		return 0;
 	}
 

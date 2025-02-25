@@ -20,6 +20,7 @@ int examples(int size, string name) {
 	int result;
 	long long count_of_mistakes = 0;
 	int vec[SIZE] = { 0 };
+	int point = 1;
 
 	clock_t start_time = clock();
 
@@ -50,15 +51,15 @@ int examples(int size, string name) {
 		} while (result <= 0);
 
 		switch (sign) {
-		case '+':cout << first_num << " + " << sec_num << " - " << third_num << " " << " = "; break;
-		case '-':cout << first_num << " - " << sec_num << " + " << third_num << " " << " = "; break;
+		case '+':cout << point << "/" << size << "). " << first_num << " + " << sec_num << " - " << third_num << " " << " = "; break;
+		case '-':cout << point << "/" << size << "). " << first_num << " - " << sec_num << " + " << third_num << " " << " = "; break;
 		}
-
+		point++;
 		cin >> vec[i];
 
 		while (vec[i] != result || vec[i] <= 0) {
 
-			cout << "\033[1;31m Try again: " << endl;
+			cout << "\033[1;31m Try again : " << endl;
 			cout << "\033[0m";
 
 			switch (sign) {
@@ -71,7 +72,7 @@ int examples(int size, string name) {
 			count_of_mistakes++;
 		}
 
-		cout << "\033[1;32m Correct" << "\033[0m" << endl;
+		cout << "\033[1;32m Correct " << "\033[0m" << endl;
 
 	}
 
