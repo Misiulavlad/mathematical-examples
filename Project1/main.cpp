@@ -19,7 +19,7 @@ int main() {
 	PAUS;
 	Syst;
 
-	cout << "Do you want to decide agin? if yeah print Yes, if no print No: ";
+	cout << "Do you want to decide agin? if yeah print yes, if no print no: ";
 	string decision;
 	cin >> decision;
 
@@ -41,5 +41,7 @@ int main() {
 	}
 
 	PAUS;
+	Syst;
+	cout << "The end.";
 	return 0;
 }
