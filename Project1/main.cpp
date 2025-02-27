@@ -31,6 +31,7 @@ int main() {
 	if (decision == "No" || decision == "no") {
 		Syst;
 		cout << "\033[1;31m It's your decision. Bruh \033[0m";
+		PAUS;
 		return 0;
 	}
 
@@ -43,5 +44,7 @@ int main() {
 	PAUS;
 	Syst;
 	cout << "The end.";
+	PAUS;
+
 	return 0;
 }
